@@ -1,0 +1,20 @@
+---
+version: 0.2
+
+phases:
+  pre_build:
+   commands:
+    - $(aws ecr get-login --no-include-email --region us-east-1)
+
+  build:
+   commands:
+    - docker build -t ad-fargate:latest .
+    - docker tag ad-fargate 061034823110.dkr.ecr.us-east-1.amazonaws.com/ad-fargate:latest
+
+  post_build:
+   commands:
+    - docker push 061034823110.dkr.ecr.us-east-1.amazonaws.com/ad-fargate:latest 
+    - printf '[{"name":<TASK_DEFINITION_NAME>,"imageUri":"%s"}]'061034823110.dkr.ecr.us-east-1.amazonaws.com/ad-fargate:latest > imagedefinitions.json
+
+artifacts:
+ files: imagedefinitions.json 
