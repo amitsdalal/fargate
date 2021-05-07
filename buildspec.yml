@@ -15,7 +15,7 @@ phases:
   post_build:
    commands:
     - docker push 061034823110.dkr.ecr.us-east-1.amazonaws.com/ad-fargate:latest 
-    - printf '[{"name":"ad-fargate-td","imageUri":"%s"}]'061034823110.dkr.ecr.us-east-1.amazonaws.com/ad-fargate:latest > imagedefinitions.json
+    - printf '[{"name": "ad-fargate-td", "imageUri":"%s"}]' 061034823110.dkr.ecr.us-east-1.amazonaws.com/ad-fargate:latest > imagedefinitions.json
 
 artifacts:
  files: imagedefinitions.json 
