@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "name": "fargate",
+  "description": "AWS Fargate test from scratch",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitsdalal/fargate.git"
+  },
+  "keywords": [
+    "AWS_fargate",
+    "AWS_ecs",
+    "serverless"
+  ],
+  "author": "Amit Dalal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amitsdalal/fargate/issues"
+  },
+  "homepage": "https://github.com/amitsdalal/fargate#readme"
+}
