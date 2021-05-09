@@ -1,3 +1,5 @@
+ARG ARCH=AMD64
+
 FROM node:alpine
 
 WORKDIR /app
