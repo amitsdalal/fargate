@@ -10,7 +10,7 @@ phases:
   build:
    commands:
     - docker build -t ad-fargate:latest .
-    - docker tag ad-fargate 061034823110.dkr.ecr.us-east-1.amazonaws.com/ad-fargate:latest
+    - docker tag ad-fargate:latest 061034823110.dkr.ecr.us-east-1.amazonaws.com/ad-fargate:latest
 
   post_build:
    commands:
