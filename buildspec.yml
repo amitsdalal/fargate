@@ -9,7 +9,8 @@ phases:
 
   build:
    commands:
-    - docker build -t ad-fargate:latest .
+    - docker build -t ad-fargate:latest --build-arg ARCH=amd64/ .
+    #- docker build -t ad-fargate:latest .
     - docker tag ad-fargate:latest 061034823110.dkr.ecr.us-east-1.amazonaws.com/ad-fargate:latest
 
   post_build:
