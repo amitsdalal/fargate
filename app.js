@@ -3,7 +3,7 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => res.send("Hello Amit Dalal from vscode"));
+app.get("/", (req, res) => res.send("Hello Amit Dalal from GitHub"));
 
 app.get("/health", (req, res) => {
     res.status(200);
